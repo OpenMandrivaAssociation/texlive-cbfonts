@@ -1,3 +1,9 @@
+# revision 20304
+# category Package
+# catalog-ctan /fonts/greek/cbfonts
+# catalog-date 2010-07-13 20:13:45 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-cbfonts
 Version:	20100713
 Release:	1
@@ -2963,6 +2969,7 @@ such font sets as the EC fonts.
 %doc %{_texmfdistdir}/doc/fonts/cbfonts/cbgreek.pdf
 %doc %{_texmfdistdir}/doc/fonts/cbfonts/cbgreek.tex
 %doc %{_texmfdistdir}/doc/fonts/cbfonts/grmn1000table.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -2973,3 +2980,5 @@ such font sets as the EC fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
