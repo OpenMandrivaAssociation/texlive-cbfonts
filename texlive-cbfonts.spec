@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 This bundle presents the whole of Beccari's original Greek font
@@ -26,20 +24,12 @@ set, both as MetaFont source and in Adobe Type 1 format. The
 set is available at the same wide set of design sizes as are
 such font sets as the EC fonts.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -2970,7 +2960,6 @@ such font sets as the EC fonts.
 %doc %{_texmfdistdir}/doc/fonts/cbfonts/cbgreek.pdf
 %doc %{_texmfdistdir}/doc/fonts/cbfonts/cbgreek.tex
 %doc %{_texmfdistdir}/doc/fonts/cbfonts/grmn1000table.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -2981,5 +2970,3 @@ such font sets as the EC fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
