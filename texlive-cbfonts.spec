@@ -2970,3 +2970,18 @@ such font sets as the EC fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100713-2
++ Revision: 750039
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100713-1
++ Revision: 718016
+- texlive-cbfonts
+- texlive-cbfonts
+- texlive-cbfonts
+- texlive-cbfonts
+- texlive-cbfonts
+
