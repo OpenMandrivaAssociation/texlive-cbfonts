@@ -1,12 +1,12 @@
-# revision 20304
+# revision 31624
 # category Package
 # catalog-ctan /fonts/greek/cbfonts
-# catalog-date 2010-07-13 20:13:45 +0200
+# catalog-date 2013-04-19 12:28:38 +0200
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-cbfonts
-Version:	20100713
-Release:	2
+Version:	20130419
+Release:	1
 Summary:	Complete set of Greek fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/cbfonts
@@ -17,12 +17,15 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
+Requires:	texlive-cbfonts-fd
 
 %description
 This bundle presents the whole of Beccari's original Greek font
-set, both as MetaFont source and in Adobe Type 1 format. The
-set is available at the same wide set of design sizes as are
-such font sets as the EC fonts.
+set, which use the 'Lispiakos' font shape derived from the
+shape of the fonts used in printers' shops in Lispia. The fonts
+are available both as Metafont source and in Adobe Type 1
+format, and at the same wide set of design sizes as are such
+font sets as the EC fonts.
 
 %post
     %{_sbindir}/texlive.post
@@ -2970,18 +2973,3 @@ such font sets as the EC fonts.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100713-2
-+ Revision: 750039
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100713-1
-+ Revision: 718016
-- texlive-cbfonts
-- texlive-cbfonts
-- texlive-cbfonts
-- texlive-cbfonts
-- texlive-cbfonts
-
