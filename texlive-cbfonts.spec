@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-cbfonts
-Version:	20130419
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	Complete set of Greek fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/cbfonts
