@@ -1,6 +1,6 @@
 Name:		texlive-cbfonts
 Version:	54080
-Release:	1
+Release:	2
 Summary:	Complete set of Greek fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/cbfonts
