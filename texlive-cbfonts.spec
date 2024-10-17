@@ -3,7 +3,7 @@ Version:	54080
 Release:	2
 Summary:	Complete set of Greek fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/greek/cbfonts
+URL:		https://www.ctan.org/tex-archive/fonts/greek/cbfonts
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cbfonts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cbfonts.doc.r%{version}.tar.xz
